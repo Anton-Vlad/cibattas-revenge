@@ -1,7 +1,7 @@
 import { THEME_TILES_MAP } from "../../helpers/consts";
 import MapCell from "./MapCell";
 
-export default function LevelBackgroundTilesLayer({ level, image }) {
+export default function LevelBackgroundTilesLayer({ level }) {
     
     const widthWithWalls = level.tilesWidth + 1;
     const heightWithWalls = level.tilesHeight + 1;
@@ -42,7 +42,6 @@ export default function LevelBackgroundTilesLayer({ level, image }) {
                     x={x}
                     y={y}
                     frameCoord={getBackgroundTile(x, y)}
-                    image={image}
                 />
             )
         }
