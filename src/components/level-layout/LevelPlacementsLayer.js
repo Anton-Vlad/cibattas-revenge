@@ -1,5 +1,4 @@
 import { CELL_SIZE } from "../../helpers/consts";
-import Sprite from "../object-graphics/Sprite";
 
 export default function LevePlacementsLayer({ level }) {
 
@@ -14,7 +13,7 @@ export default function LevePlacementsLayer({ level }) {
 
         return (
           <div key={placement.id} style={style}>
-            <Sprite frameCoord={placement.frameCoord} />
+            {placement.renderComponent()}
           </div>
         );
       }
